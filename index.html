@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Verse - Palette Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Color Verse</h1>
+    <p>Discover, create, and explore beautiful color palettes</p>
+    <button id="darkModeToggle">🌓 Toggle Dark Mode</button>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>What is Color Verse?</h2>
+      <p><strong>Color Verse</strong> is an interactive palette explorer designed for designers, developers, and students to discover and create beautiful color combinations.</p>
+      <h3>🎨 Key Features:</h3>
+      <ul>
+        <li>Browse curated color palettes</li>
+        <li>Hover over swatches to preview</li>
+        <li>Click palettes to view and copy colors</li>
+        <li>Submit your own palettes</li>
+        <li>View palette summary in table</li>
+        <li>Dark Mode available</li>
+      </ul>
+      <h3>👨‍💻 Tech Stack:</h3>
+      <p>HTML5, CSS3 (Flexbox, Grid, Animations), JavaScript (DOM, Events)</p>
+    </section>
+
+    <section class="how-to-use">
+      <h2>🚀 How to Use This Website</h2>
+      <ol>
+        <li>Scroll through existing palettes</li>
+        <li>Hover for highlights</li>
+        <li>Click to view HEX values</li>
+        <li>Use the form to add your own</li>
+        <li>Toggle dark mode anytime</li>
+      </ol>
+    </section>
+
+    <section class="form-section">
+      <h2>Suggest a New Palette</h2>
+      <form id="paletteForm">
+        <input type="text" id="paletteName" placeholder="Palette Name" required />
+        <input type="text" id="color1" placeholder="#Color1" required />
+        <input type="text" id="color2" placeholder="#Color2" required />
+        <input type="text" id="color3" placeholder="#Color3" required />
+        <input type="text" id="color4" placeholder="#Color4" required />
+        <button type="submit">Add Palette</button>
+      </form>
+    </section>
+
+    <section class="palette-container" id="paletteContainer"></section>
+
+    <section class="table-section">
+      <h2>Palette Summary Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Palette Name</th>
+            <th>Colors</th>
+          </tr>
+        </thead>
+        <tbody id="paletteTableBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Color Verse | Designed by Shashi Bhardwaj</p>
+    <p>Learn more at <a href="https://colorhunt.co/" target="_blank">Color Hunt</a></p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="colorModal" class="modal">
+    <div class="modal-content">
+      <span id="modalClose">&times;</span>
+      <h3 id="modalPaletteName"></h3>
+      <div id="modalColors"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
